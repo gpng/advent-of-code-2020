@@ -1,5 +1,5 @@
-Advent of Code 2020 (Go)
-Instructions
+# Advent of Code 2020 (Go)
+## Instructions
 
 In each day folder:
 

@@ -6,6 +6,7 @@ import (
 	"os"
 
 	"github.com/gpng/advent-of-code-2020/day1"
+	"github.com/gpng/advent-of-code-2020/day2"
 )
 
 func main() {
@@ -15,6 +16,7 @@ func main() {
 
 	runMap := map[int]func(){
 		1: day1.Run,
+		2: day2.Run,
 	}
 
 	// run all

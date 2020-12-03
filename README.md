@@ -1,4 +1,6 @@
-# Advent of Code 2020 (Go)
+# Advent of Code 2020
+
+Go + Typescript
 
 ## Instructions
 

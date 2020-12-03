@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "allowJs": true,
+    "strict": true,
+    "lib": [
+      "dom",
+      "es2020"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "node"
+    ],
+    "moduleResolution": "node"
+  },
+  "include": [
+    "**/*",
+  ],
+  "exclude": [
+    "node_modules",
+  ],
+}

@@ -60,8 +60,6 @@ func (com *Computer) Run() (int, bool) {
 
 	index := 0
 
-	// log.Printf("com.Instructions: %v\n", com.Instructions)
-
 	for true {
 		if com.History[index] {
 			return com.Acc, true
@@ -77,14 +75,17 @@ func (com *Computer) Run() (int, bool) {
 			{
 				index++
 				com.Acc += instr.Arg
+				break
 			}
 		case OpJmp:
 			{
 				index += instr.Arg
+				break
 			}
 		case OpNop:
 			{
 				index++
+				break
 			}
 		}
 	}

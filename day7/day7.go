@@ -69,6 +69,8 @@ func part1(rules map[string]map[string]int) int {
 }
 
 func part2(rules map[string]map[string]int) int {
+	defer utils.Timer("Part 2")()
+
 	type Bag struct {
 		num  int
 		name string

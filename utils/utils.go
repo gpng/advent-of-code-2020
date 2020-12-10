@@ -42,15 +42,33 @@ func ScanFileLinesToInt(path string, sep string) []int {
 
 	list := []int{}
 	for _, v := range lines {
+		i, err := strconv.Atoi(v)
+		if err != nil {
+			log.Fatalf("Failed to convert line to integer\nline: %s\nerror: %v", v, err)
+		} else {
+			list = append(list, i)
+		}
+	}
+	return list
+}
+
+// ScanFileLinesToInts - Scans each line into list of integers
+func ScanFileLinesToInts(path string, sep string) [][]int {
+	lines := ScanFile(path)
+
+	list := [][]int{}
+	for _, v := range lines {
+		row := []int{}
 		strs := strings.Split(v, sep)
 		for _, vv := range strs {
 			i, err := strconv.Atoi(vv)
 			if err != nil {
 				log.Fatalf("Failed to convert line to integer\nline: %s\nerror: %v", vv, err)
 			} else {
-				list = append(list, i)
+				row = append(row, i)
 			}
 		}
+		list = append(list, row)
 	}
 	return list
 }

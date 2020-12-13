@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"math"
+	"net/url"
 	"strconv"
 	"strings"
 
@@ -52,8 +53,8 @@ func part2(rows [][]string) string {
 			continue
 		}
 		busNo, _ := strconv.Atoi(bus)
-		eq := fmt.Sprintf("(t + %d)%%%d=0", i, busNo)
+		eq := fmt.Sprintf("(t+%d)%%%d=0", i, busNo)
 		eqs = append(eqs, eq)
 	}
-	return "Copy paste this into www.wolframalpha.com: " + strings.Join(eqs, ", ")
+	return "Visit www.wolframalpha.com/input?i=" + url.QueryEscape(strings.Join(eqs, ", "))
 }

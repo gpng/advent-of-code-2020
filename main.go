@@ -11,6 +11,7 @@ import (
 	"github.com/gpng/advent-of-code-2020/day12"
 	"github.com/gpng/advent-of-code-2020/day13"
 	"github.com/gpng/advent-of-code-2020/day14"
+	"github.com/gpng/advent-of-code-2020/day15"
 	"github.com/gpng/advent-of-code-2020/day2"
 	"github.com/gpng/advent-of-code-2020/day3"
 	"github.com/gpng/advent-of-code-2020/day4"
@@ -41,6 +42,7 @@ func main() {
 		12: day12.Run,
 		13: day13.Run,
 		14: day14.Run,
+		15: day15.Run,
 	}
 
 	// run all

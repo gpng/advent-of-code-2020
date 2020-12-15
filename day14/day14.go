@@ -9,8 +9,8 @@ import (
 
 // Run code
 func Run() {
-
-	defer utils.Timer("Day 14 total")()
+	log.Println("Running day 14")
+	defer utils.Timer("Day 1 total")()
 
 	rows := utils.ScanFileLinesToStrings("day14/input.txt", " = ")
 	log.Printf("Part 1 answer: %d", part1(rows))
